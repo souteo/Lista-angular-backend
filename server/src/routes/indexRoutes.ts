@@ -10,6 +10,7 @@ class IndexRoutes{
     }
     //configuracion api
     config(): void{
+        this.router.get('/', indexController.listTasks);
         this.router.get('/tasks', indexController.listTasks);
         this.router.post('/tasks', indexController.createTask);
         this.router.delete('/tasks:id', indexController.deleteTask);
